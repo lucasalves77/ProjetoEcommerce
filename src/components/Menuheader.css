@@ -1,3 +1,39 @@
 .header{
+  background-color: #105caa;
+}
+
+.meuHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meuHeader ul{
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.header-link{
+  text-decoration: none;
   color: white;
+  font-weight: 600;
+}
+
+.meuHeader h3{
+  background-color: #ea1044;
+  padding: 8px 20px;
+}
+
+.socials{
+  display: flex;
+  gap: 12px;
+  background-color: #196cbe;
+  padding: 13px 10px;
+}
+
+.socials a{
+  display: flex;
+  color: white;
+  font-size: 1.2rem;
 }
