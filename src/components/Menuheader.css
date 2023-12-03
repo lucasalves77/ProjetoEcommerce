@@ -1,17 +1,50 @@
+.headerOne{
+  background-color: #023f7c;
+}
+
 .header{
   background-color: #105caa;
+  
+}
+
+.meuHeaderOne{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.meuHeaderOne ul{
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.meuHeaderOne{
+  color: white;
+}
+
+.carUserLogin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #04305c;
+  padding: 2%;
+  width: 10%;
+}
+
+.carUser {
+  margin: 0 10px;
+  font-size: 25px;
+  color: white;
 }
 
 .meuHeader{
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.meuHeader ul{
-  display: flex;
-  gap: 40px;
-  list-style: none;
+  gap: 10%;
 }
 
 .header-link{
@@ -20,12 +53,40 @@
   font-weight: 600;
 }
 
-.meuHeader h3{
-  background-color: #ea1044;
-  padding: 8px 20px;
+.input{
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: end;
+}
+
+.input input{
+  width: 100%;
+  border: 0;
+  border-radius: 15px;
+  padding: 5px 20px;
+  background-color: #023f7c;
+  color: white;
+}
+
+.input input:focus{
+  outline: none;
+  box-shadow: none;
+  color: white;
+}
+
+.search{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  color: white;
 }
 
 .socials{
+  width: 10%;
   display: flex;
   gap: 12px;
   background-color: #196cbe;
@@ -36,4 +97,12 @@
   display: flex;
   color: white;
   font-size: 1.2rem;
+}
+
+@media (max-width: 500px){
+
+  .meuHeader{
+    display: none;
+    
+  }
 }

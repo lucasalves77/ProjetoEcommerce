@@ -1,64 +1,52 @@
-.produtos{
+.carousel {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.produtos h1{
-  color: #105caa;
-  margin-bottom: 20px;
-}
-
-.category{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.category a{
-  color: #666;
-  text-decoration: none;
-  background-color: #ffffff;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-}
-
-.category a:hover{
-  color: white;
-  background-color: #105caa;
-  transition: all 0.3s ease-in-out;
-}
-
-.flexCard{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.flexCard div{
-  background-color: white;
-}
-
-.flexCard img{
-  display: block;
+  overflow-x: auto;
+  justify-content: space-between;
+  scroll-behavior: smooth;
   width: 100%;
-  padding: 0 5px;
-  cursor: pointer;
+  gap: 10px;
 }
 
-.flexCardBox{
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.flexCardBox {
   position: relative;
-  padding: 25px;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
+  background-color: white;
+  padding: 20px;
+  width: 205px;
+  flex: none; 
+  -moz-transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+  -o-transform: scale(1.0);
+  transform: scale(1.0);
+  transform-origin: center center;
+  -moz-transform-origin: center center;
+  -webkit-transform-origin: center center;
+}
+
+.flexCardBox:last-child{
+  margin-right: 5px;
+}
+
+.flexCardBox:first-child{
+  margin-left: 5px;
 }
 
 .flexCardBox:hover{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  z-index: 999;
+  -moz-transform: scale(1.1); 
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.flexCardBox .image img {
+  width: 100%;
+  padding: 20px;
+  object-fit: cover;
 }
 
 .flexCardBoxInfo {
@@ -81,6 +69,61 @@
   color: #f0cb20;
 }
 
+.produtos{
+  margin: 20px 0;
+}
+
+.produtos h1{
+  color: #105caa;
+  margin-bottom: 20px;
+}
+
+.categoriasProdutos, .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.category a{
+  color: #666;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+}
+
+.category a:hover{
+  color: white;
+  background-color: #105caa;
+  transition: all 0.5s ease-in-out;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  background-color: #105caa;
+  margin-left: 10px;
+  border-radius: 3px ;
+}
+
+.buttonBackNext{
+  display: block;
+  color: white;
+  font-size: 1rem;
+}
+
 .valorCar{
   display: flex;
   width: 100%;
@@ -100,14 +143,23 @@
   text-align: center;
   padding: 5px 15px;
   color: white;
-  background-color: #105caa;
+  background-color: #ea1044;
   font-size: 1.2rem;
   transition: bottom 0.3s ease-in-out;
 }
 
 .flexCardBox:hover .valorCar a {
-  bottom: 10px;
+  bottom: 20px;
+  transition: bottom 0.3s ease-in-out;
 }
 
+.flexCardBox:not(:hover) .valorCar a{
+  bottom: -50px; 
+}
 
+@media (max-width: 500px){
 
+  .flexCardBox {
+    width: 50%;
+  }
+}
