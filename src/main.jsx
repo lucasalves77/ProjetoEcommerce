@@ -8,6 +8,7 @@ import Promocao from "./pages/Promocao";
 import Novidade from "./pages/Novidade";
 import Contato from "./pages/Contato";
 import Home from "./pages/Home"
+import Footer from "./components/Footer";
 
 
 
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Novidade" element={<Novidade/>}/> 
         <Route path="/Contato" element={<Contato/>}/> 
       </Routes>
+      <Footer/>
     </BrowserRouter>
   </React.StrictMode>,
 )

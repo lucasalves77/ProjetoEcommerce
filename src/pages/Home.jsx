@@ -4,10 +4,12 @@ import { TiStar } from "react-icons/ti";
 import { FaCartPlus } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import Banner from "./Banner"
+import card from '../imagens/sub-01.jpg'
 
 
 
-function Home2() {
+function Home() {
   const [data, setData] = useState([]);
   const carousel = useRef(null);
 
@@ -43,6 +45,21 @@ function Home2() {
 
   return (
     <div className="container">
+      <Banner />
+       <div className='box'>
+        <div>
+          <img src={card} alt="" />
+        </div>
+        <div>
+          <img src={card} alt="" />
+        </div>
+        <div>
+          <img src={card} alt="" />
+        </div>
+        <div>
+          <img src={card} alt="" />
+        </div>
+      </div>
       <div className="produtos">
           <h1>NEW ARRIVALS</h1>
         <div className='categoriasProdutos'>
@@ -96,4 +113,4 @@ function Home2() {
   );
 }
 
-export default Home2;
+export default Home;

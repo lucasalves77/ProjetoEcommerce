@@ -4,7 +4,6 @@
 
 .header{
   background-color: #105caa;
-  
 }
 
 .meuHeaderOne{
@@ -83,6 +82,7 @@
   transform: translate(-50%, -50%);
   font-size: 1.6rem;
   color: white;
+  border-radius: 50%;
 }
 
 .socials{

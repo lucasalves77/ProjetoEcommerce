@@ -1,0 +1,49 @@
+.bannerOne{
+  position: relative;
+  background-color: red;
+}
+
+.banner {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.banner::-webkit-scrollbar {
+  display: none;
+}
+
+.bannerImg{
+  width: 100%;
+  flex: none; 
+}
+
+.bannerImg img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.buttonsBanner{
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.buttonsBanner button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 20px 10px;
+  background-color: #105caa;
+}
+
+.buttonIconBanner{
+  display: block;
+  color: white;
+  font-size: 1rem;
+}
