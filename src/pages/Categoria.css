@@ -1,7 +1,11 @@
 .categoria{
   background-color: #ea1044;
-  width: 270px;
-  padding: 2px 0;
+  width: 220px;
+  height: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 details summary::-webkit-details-marker {
@@ -11,9 +15,10 @@ details summary::-webkit-details-marker {
 summary{
   display: flex;
   align-items: center;
-  padding: 8px 15px;
+  justify-content: center;
   gap: 10px;
   font-weight: 600;
+  padding: 0 10px;
   color: white;
   list-style-type: none;
   cursor: pointer;
@@ -24,7 +29,9 @@ summary{
 details ul{
   display: flex;
   flex-direction: column;
-  margin-top: 2px;
+  position: absolute;
+  left: 0;
+  top: 100%;
   width: 200px;
   padding: 20px 15px;
   display: flex;

@@ -7,9 +7,10 @@ import { FaCcMastercard } from "react-icons/fa";
 import { FaPix } from "react-icons/fa6";
 import { FaCcPaypal } from "react-icons/fa";
 import { FaBarcode } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+import PlaceRoundedIcon from '@mui/icons-material/PlaceRounded';
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import './Footer.css'
 
 
@@ -19,23 +20,24 @@ const Footer = () =>{
     <>
     <div className="footerOne">
       <div className="container">
+        
         <div className="footerOneFlex">
-            <div>
+            <div className="contato">
               <h5>Contato</h5>
               <div className="line"></div>
               <div className="contact">
                 <ul>
-                <MdEmail className="iconContact"/>
-                <p>exemplo@email.com</p>
-              </ul>
-              <ul>
-              <FaPhone className="iconContact"/>
-                <p>(555) 123-4567</p>
-              </ul>
-              <ul>
-              <FaLocationDot className="iconContact"/>
-              <p>Rua das Ilusões, 123, Cidade dos Sonhos, Estado Imaginário, CEP: 12345-678</p>
-              </ul>
+                  <EmailRoundedIcon className="iconContact"/>
+                  <p>exemplo@email.com</p>
+                </ul>
+                <ul>
+                  <LocalPhoneRoundedIcon className="iconContact"/>
+                  <p>(555) 123-4567</p>
+                </ul>
+                <ul>
+                  <PlaceRoundedIcon className="iconContact"/>
+                  <p>Rua das Ilusões, 123, Cidade dos Sonhos, Estado Imaginário, CEP: 12345-678</p>
+                </ul>
               </div>
             </div>
           <div>
@@ -73,23 +75,35 @@ const Footer = () =>{
               </ul>
             </div>
         </div> 
+        <div className="linhaFooter"></div>
+        <div className="newsletter">
+          <div className="newsletterFlex">
+            <h2>Newsletter</h2>
+            <div className="line"></div>
+            <p>Assine nossa Newsletter e receba as últimas novidades, dicas de moda e promoções exclusivas.</p>
+            <ul>
+              <input type="text" />
+              <a href=""><ArrowForwardRoundedIcon className="seta"/></a>
+            </ul>
+          </div>
+          <ul>
+            <FaCcMastercard className="socialsCash"  />
+            <FaCcPaypal className="socialsCash"  />
+            <FaPix className="socialsCash"  />
+            <FaBarcode className="socialsCash"  />
+          </ul>
+        </div>
       </div> 
       </div> 
       <div className="footerTwo">
         <div className="container">
         <div className="footerTwoFlex">
+            <p>Powered by BigCommerce© 2023 PayeeShop</p>
           <ul>
             <a href=""><AiFillInstagram className="socialsCash" /></a>
             <a href=""><IoLogoTwitter className="socialsCash"  /></a>
             <a href=""><FaLinkedinIn className="socialsCash"  /></a>
             <a href=""><FaFacebookF className="socialsCash"  /></a>
-          </ul>
-          <ul>
-            <p>Powered by BigCommerce© 2023 PayeeShop</p>
-            <FaCcMastercard className="socialsCash"  />
-            <FaCcPaypal className="socialsCash"  />
-            <FaPix className="socialsCash"  />
-            <FaBarcode className="socialsCash"  />
           </ul>
         </div>
       </div>

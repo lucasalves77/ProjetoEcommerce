@@ -8,7 +8,6 @@ import './Banner.css'
 const Banner = () =>{
 
   const [data, setData] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(0);
   const carousel = useRef(null);
 
   useEffect(() => {
@@ -17,28 +16,51 @@ const Banner = () =>{
       .then(setData);
   }, []);
 
+  const [botaoEsquerdoAtivado, setBotaoEsquerdoAtivado] = useState(true);
+  const [botaoDireitoAtivado, setBotaoDireitoAtivado] = useState(true);
+
   const handleLeftClick = (e) => {
     e.preventDefault();
 
-    carousel.current.scrollLeft -= 1290;
-  };
+    if (botaoEsquerdoAtivado) {
+      // Realiza a ação desejada aqui
+      console.log("Botão esquerdo clicado!");
 
+      // Desativa o botão esquerdo temporariamente
+      setBotaoEsquerdoAtivado(false);
+
+      // Reativa o botão após um período de tempo (por exemplo, 1 segundo)
+      setTimeout(() => {
+        setBotaoEsquerdoAtivado(true);
+      }, 1000);
+
+      // Sua lógica para rolar para a esquerda
+      carousel.current.scrollLeft -= 1290;
+    }
+  };
 
   const handleRightClick = (e) => {
     e.preventDefault();
-   
-    // Verifica se o carrossel atingiu o final
-    if (
-      carousel.current.scrollLeft + carousel.current.clientWidth ===
-      carousel.current.scrollWidth
-      
-    ) {
-      // Se sim, volta ao início
-      carousel.current.scrollLeft = 0;
-    } else {
-      // Se não, rola para a direita
-      carousel.current.scrollLeft += 1290;
-    };
+
+    if (botaoDireitoAtivado) {
+      // Realiza a ação desejada aqui
+      console.log("Botão direito clicado!");
+
+      // Desativa o botão direito temporariamente
+      setBotaoDireitoAtivado(false);
+
+      // Reativa o botão após um período de tempo (por exemplo, 1 segundo)
+      setTimeout(() => {
+        setBotaoDireitoAtivado(true);
+      }, 1000);
+
+      // Sua lógica para rolar para a direita
+      if (carousel.current.scrollLeft + carousel.current.clientWidth === carousel.current.scrollWidth) {
+        carousel.current.scrollLeft = 0;
+      } else {
+        carousel.current.scrollLeft += 1290;
+      }
+    }
   };
 
   if (!data || !data.length) return null;
@@ -63,10 +85,10 @@ const Banner = () =>{
             })}
           </div>
           <div className="buttonsBanner">
-              <button onClick={handleLeftClick}>
+              <button onClick={handleLeftClick} disabled={!botaoEsquerdoAtivado}>
                 <IoIosArrowBack className='buttonIconBanner'/>
               </button>
-              <button onClick={handleRightClick}>
+              <button onClick={handleRightClick} disabled={!botaoDireitoAtivado}>
                 <IoIosArrowForward className='buttonIconBanner'/>
             </button>
           </div>

@@ -4,6 +4,7 @@ import { TiStar } from "react-icons/ti";
 import { FaCartPlus } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import CardDeitado from "./CardDeitado"
 import Banner from "./Banner"
 import card from '../imagens/sub-01.jpg'
 
@@ -19,27 +20,54 @@ function Home() {
       .then(setData);
   }, []);
 
+
+  const [botaoEsquerdoAtivado, setBotaoEsquerdoAtivado] = useState(true);
+  const [botaoDireitoAtivado, setBotaoDireitoAtivado] = useState(true);
+
   const handleLeftClick = (e) => {
     e.preventDefault();
 
-    carousel.current.scrollLeft -= 1290;
+    if (botaoEsquerdoAtivado) {
+      // Realiza a ação desejada aqui
+      console.log("Botão esquerdo clicado!");
+
+      // Desativa o botão esquerdo temporariamente
+      setBotaoEsquerdoAtivado(false);
+
+      // Reativa o botão após um período de tempo (por exemplo, 1 segundo)
+      setTimeout(() => {
+        setBotaoEsquerdoAtivado(true);
+      }, 1000);
+
+      // Sua lógica para rolar para a esquerda
+      carousel.current.scrollLeft -= 1290;
+    }
   };
 
   const handleRightClick = (e) => {
     e.preventDefault();
 
-    // Verifica se o carrossel atingiu o final
-    if (
-      carousel.current.scrollLeft + carousel.current.clientWidth ===
-      carousel.current.scrollWidth
-    ) {
-      // Se sim, volta ao início
-      carousel.current.scrollLeft = 0;
-    } else {
-      // Se não, rola para a direita
-      carousel.current.scrollLeft += 1290;
-    };
+    if (botaoDireitoAtivado) {
+      // Realiza a ação desejada aqui
+      console.log("Botão direito clicado!");
+
+      // Desativa o botão direito temporariamente
+      setBotaoDireitoAtivado(false);
+
+      // Reativa o botão após um período de tempo (por exemplo, 1 segundo)
+      setTimeout(() => {
+        setBotaoDireitoAtivado(true);
+      }, 1000);
+
+      // Sua lógica para rolar para a direita
+      if (carousel.current.scrollLeft + carousel.current.clientWidth === carousel.current.scrollWidth) {
+        carousel.current.scrollLeft = 0;
+      } else {
+        carousel.current.scrollLeft += 1290;
+      }
+    }
   };
+
 
   if (!data || !data.length) return null;
 
@@ -47,6 +75,9 @@ function Home() {
     <div className="container">
       <Banner />
        <div className='box'>
+        <div>
+          <img src={card} alt="" />
+        </div>
         <div>
           <img src={card} alt="" />
         </div>
@@ -71,10 +102,10 @@ function Home() {
               <a href="">CAMERA</a>
           </div>   
           <div className="buttons">
-            <button onClick={handleLeftClick}>
+            <button onClick={handleLeftClick} disabled={!botaoEsquerdoAtivado}>
               <IoIosArrowBack className='buttonBackNext'/>
             </button>
-            <button onClick={handleRightClick}>
+            <button onClick={handleRightClick} disabled={!botaoDireitoAtivado}>
               <IoIosArrowForward className='buttonBackNext'/>
             </button>
           </div>
@@ -107,8 +138,9 @@ function Home() {
           );
         })}
       </div>
-    
-     
+      <div>
+        <CardDeitado/>
+      </div>
     </div>
   );
 }

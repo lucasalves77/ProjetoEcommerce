@@ -17,3 +17,9 @@ body{
   max-width: 1290px;
   margin: 0 auto;
 }
+
+@-moz-document url-prefix() {
+  .container {
+      -moz-max-width: 1290px;
+  }
+}

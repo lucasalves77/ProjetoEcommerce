@@ -1,26 +1,35 @@
 .headerOne{
-  background-color: #023f7c;
+  background-color: #105caa;
 }
 
 .header{
-  background-color: #105caa;
+  background-color: #023f7c;
 }
 
 .meuHeaderOne{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 10vh;
+  gap: 50px;
 }
 
 .meuHeaderOne ul{
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
   list-style: none;
+  width: 100%;
 }
 
 .meuHeaderOne{
   color: white;
+}
+
+.meuHeaderOne h2{
+  color: white;
+  width: 220px;
 }
 
 .carUserLogin{
@@ -28,14 +37,14 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  background-color: #04305c;
-  padding: 2%;
-  width: 10%;
+  background-color: #0f5091;
+  width: 220px;
+  height: 100%;
 }
 
 .carUser {
   margin: 0 10px;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
 }
 
@@ -43,7 +52,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10%;
+  height: 6vh;
+  gap: 50px;
+  width: 100%;
 }
 
 .header-link{
@@ -53,18 +64,19 @@
 }
 
 .input{
-  width: 100%;
   display: flex;
   position: relative;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .input input{
   width: 100%;
   border: 0;
-  border-radius: 15px;
-  padding: 5px 20px;
-  background-color: #023f7c;
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: #105caa;
   color: white;
 }
 
@@ -74,23 +86,32 @@
   color: white;
 }
 
-.search{
-  display: block;
+.input a{
   position: absolute;
+  display: flex;
+  align-items: center;
   right: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.6rem;
+  background-color: #ea1044;
+  height: 100%;
+  padding: 0 15px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.search{
   color: white;
-  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .socials{
-  width: 10%;
   display: flex;
-  gap: 12px;
-  background-color: #196cbe;
-  padding: 13px 10px;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  gap: 20px;
+  background-color: #03376b;
+  height: 100%;
 }
 
 .socials a{
