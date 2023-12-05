@@ -40,7 +40,7 @@ function Home() {
       }, 1000);
 
       // Sua lógica para rolar para a esquerda
-      carousel.current.scrollLeft -= 1290;
+      carousel.current.scrollLeft -= 1290 / 3;
     }
   };
 
@@ -63,7 +63,7 @@ function Home() {
       if (carousel.current.scrollLeft + carousel.current.clientWidth === carousel.current.scrollWidth) {
         carousel.current.scrollLeft = 0;
       } else {
-        carousel.current.scrollLeft += 1290;
+        carousel.current.scrollLeft += 1290 / 3;
       }
     }
   };
@@ -131,16 +131,14 @@ function Home() {
                 </ul>
                 <ul className="valorCar">
                   <h4>R${price}</h4>
-                  <a href=""><FaCartPlus /></a>
+                  <a href=""><FaCartPlus className='addCar'/></a>
                 </ul>
               </div>
             </div>
           );
         })}
       </div>
-      <div>
         <CardDeitado/>
-      </div>
     </div>
   );
 }

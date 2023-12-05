@@ -67,7 +67,6 @@ const Banner = () =>{
 
   return(
     <>
-      <div className="container">
         <div className="bannerOne">
           <div className='banner' ref={carousel}>
               {data.map((item) => {
@@ -75,25 +74,19 @@ const Banner = () =>{
               return(
             <div className="bannerImg" key={id}>
               <img src={image} alt="" />
-              <div className="circulo">
-                <div ></div>
-                <div ></div>
-                <div ></div>
-              </div>   
             </div>
             )
             })}
-          </div>
+          </div>{/* bannerOne */}
           <div className="buttonsBanner">
-              <button onClick={handleLeftClick} disabled={!botaoEsquerdoAtivado}>
-                <IoIosArrowBack className='buttonIconBanner'/>
-              </button>
-              <button onClick={handleRightClick} disabled={!botaoDireitoAtivado}>
-                <IoIosArrowForward className='buttonIconBanner'/>
+            <button onClick={handleLeftClick} disabled={!botaoEsquerdoAtivado}>
+              <IoIosArrowBack className='buttonIconBanner'/>
             </button>
-          </div>
-        </div>
-      </div>
+            <button onClick={handleRightClick} disabled={!botaoDireitoAtivado}>
+              <IoIosArrowForward className='buttonIconBanner'/>
+            </button>
+          </div>{/* buttonsBanner */}
+        </div>{/* bannerOne */}
     </>
   )
 }

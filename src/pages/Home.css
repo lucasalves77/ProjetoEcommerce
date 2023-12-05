@@ -10,17 +10,13 @@
   width: 100%;
 }
 
-.box div{
-  background-color: green;
-}
-
 .carousel {
   display: flex;
   overflow: hidden;
   justify-content: space-between;
   scroll-behavior: smooth;
   width: 100%;
-  gap: 10px;
+
 }
 
 .carousel::-webkit-scrollbar {
@@ -31,7 +27,8 @@
   position: relative;
   background-color: white;
   padding: 20px;
-  width: 205px;
+  width: calc(100% / 6 - 10px);
+  margin-right: 10px;
   flex: none; 
   -moz-transform: scale(1.0);
   -webkit-transform: scale(1.0);
@@ -40,14 +37,6 @@
   transform-origin: center center;
   -moz-transform-origin: center center;
   -webkit-transform-origin: center center;
-}
-
-.flexCardBox:last-child{
-  margin-right: 5px;
-}
-
-.flexCardBox:first-child{
-  margin-left: 5px;
 }
 
 .flexCardBox:hover{
@@ -79,6 +68,7 @@
 .flexCardBoxInfo h3{
   font-size: 0.9rem;
   font-weight: lighter;
+  height: 4vh;
 }
 
 .flexCardBoxInfo span{
@@ -141,6 +131,7 @@
 
 .valorCar{
   display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -149,14 +140,21 @@
   color: #666666;
 }
 
+.addCar{
+  display: flex;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+}
+
 .valorCar a{
   position: absolute;
-  bottom: -40px;
+  bottom: -29px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translatex(-50%);
+  padding: 5px;
   width: 100%;
   text-align: center;
-  padding: 5px 15px;
   color: white;
   background-color: #ea1044;
   font-size: 1.2rem;
@@ -164,21 +162,38 @@
 }
 
 .flexCardBox:hover .valorCar a {
-  bottom: 20px;
+  bottom: 16px;
   transition: bottom 0.3s ease-in-out;
-}
-
-.flexCardBox:not(:hover) .valorCar a{
-  bottom: -50px; 
 }
 
 .banner img{
   width: 100%;
 }
 
+@media (max-width: 800px){
+
+  .flexCardBox {
+    width: calc(100% / 4 - 10px);
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 500px){
+
+  .flexCardBox {
+    width: calc(100% / 2 - 10px);
+    margin-right: 10px;
+  }
+
+  .category{
+    display: none;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
 
   .flexCardBox {
     width: 50%;
   }
 }
+

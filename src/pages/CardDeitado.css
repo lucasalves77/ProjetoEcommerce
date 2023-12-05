@@ -1,6 +1,7 @@
 .displayFlex{
   display: flex;
   flex-direction: column;
+  height: 30vh;
   gap: 10px;
 }
 
@@ -10,7 +11,6 @@
   justify-content: space-between;
   scroll-behavior: smooth;
   width: 100%;
-  gap: 10px;
 }
 
 .CardDeitado::-webkit-scrollbar {
@@ -22,7 +22,8 @@
   align-items: center;
   position: relative;
   background-color: white;
-  width: 423.33px;
+  width: calc(100% / 3 - 10px);
+  margin-right: 10px;
   flex: none; 
   -moz-transform: scale(1.0);
   -webkit-transform: scale(1.0);
@@ -32,14 +33,6 @@
   -moz-transform-origin: center center;
   -webkit-transform-origin: center center;
   transition: transform 0.3s ease;
-}
-
-.CardDeitado-flex:last-child{
-  margin-right: 5px;
-}
-
-.CardDeitado-flex:first-child{
-  margin-left: 5px;
 }
 
 .CardDeitado-flex:hover{
@@ -52,18 +45,26 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-.CardDeitado-flex .image img {
+.CardDeitado-image {
+  width: 100%;
+  height: 100%;
+}
+
+.CardDeitado-image img {
   width: 100%;
   padding: 10px;
+  display: block;
   object-fit: cover;
-  height: 20vh;
+  height: 100%;
 }
 
 .CardDeitado-Info {
-
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  padding: 10px;
+  height: 100%;
 }
 
 .CardDeitado-Info p{
@@ -73,20 +74,14 @@
 
 .CardDeitado-Info h3{
   font-size: 0.9rem;
-  font-weight: lighter;
+  font-weight: 400;
+  height: 4vh;
+  line-height: 15pt;
+  margin: 2px 0;
 }
 
 .CardDeitado-Info span{
   color: #f0cb20;
-}
-
-.produtos{
-  margin: 20px 0;
-}
-
-.produtos h1{
-  color: #105caa;
-  margin-bottom: 20px;
 }
 
 .categoriasProdutos, .buttons{
@@ -119,6 +114,11 @@
   transition: all 0.5s ease-in-out;
 }
 
+.botoes{
+  display: flex;
+  justify-content: space-between;
+}
+
 .buttons button {
   background-color: transparent;
   border: none;
@@ -141,26 +141,26 @@
 .CardDeitado-valor h4{
   display: block;
   color: #666666;
+  margin-top: 2px;
 }
 
 .CardDeitado-valor a{
   position: absolute;
   bottom: -40px;
   right: 0;
-  width: 20%;
-
+  width: 50%;
   text-align: center;
   padding: 5px 15px;
   color: white;
   background-color: #ea1044;
   font-size: 1.2rem;
   transition: bottom 0.3s ease-in-out;
+  z-index: 999;
 }
 
 .CardDeitado-flex:hover .CardDeitado-valor a {
-  bottom: 45px;
+  bottom: 5px;
   transition: bottom 0.3s ease-in-out;
-
 }
 
 .CardDeitado-flex:not(:hover) .CardDeitado-valor a{
@@ -169,4 +169,13 @@
 
 .banner img{
   width: 100%;
+}
+
+@media (max-width: 800px){
+
+  .CardDeitado-flex {
+    width: calc(100% / 2 - 10px);
+    margin-right: 10px;
+   
+  }
 }

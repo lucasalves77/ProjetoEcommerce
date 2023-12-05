@@ -40,8 +40,8 @@ const CardDeitado = () =>{
       }, 1000);
 
       // Sua lógica para rolar para a esquerda
-      CardDeitadoOne.current.scrollLeft -= 1290;
-      CardDeitadoTwo.current.scrollLeft -= 1290;
+      CardDeitadoOne.current.scrollLeft -= 1290 / 3;
+      CardDeitadoTwo.current.scrollLeft -= 1290 / 3;
     }
   };
 
@@ -67,8 +67,8 @@ const CardDeitado = () =>{
         CardDeitadoOne.current.scrollLeft = 0;
         CardDeitadoTwo.current.scrollLeft = 0;
       } else {
-        CardDeitadoOne.current.scrollLeft += 1290;
-        CardDeitadoTwo.current.scrollLeft += 1290;
+        CardDeitadoOne.current.scrollLeft += 1290 / 3;
+        CardDeitadoTwo.current.scrollLeft += 1290 / 3;
       }
     }
   };
@@ -78,9 +78,9 @@ const CardDeitado = () =>{
 
   return(
     <>
-      <div className="container">
-        <div>
-          <div className="buttons"><h1>ggggg</h1>
+      <div className="botoes">
+          <h1>ggggg</h1>
+          <div className="buttons">
           <button onClick={handleLeftClick} disabled={!botaoEsquerdoAtivado}>
             <IoIosArrowBack className='buttonBackNext'/>
           </button>
@@ -91,38 +91,11 @@ const CardDeitado = () =>{
         </div>
         <div className="displayFlex">
           <div className="CardDeitado" ref={CardDeitadoOne}>
-         {data.map((item) => {
-          const { id, name, price, categoria, image } = item;
-          return (
-            <div className="CardDeitado-flex" key={id}>
-              <div className="image">
-                <img src={image} alt={name} />
-              </div>
-              <div className="CardDeitado-Info">
-                <p>{categoria}</p>
-                <h3>{name}</h3>
-                <ul>
-                  <span><TiStar /></span>
-                  <span><TiStar /></span>
-                  <span><TiStar /></span>
-                  <span><TiStar /></span>
-                  <span><TiStar /></span>
-                </ul>
-                <ul className="CardDeitado-valor">
-                  <h4>R${price}</h4>
-                  <a href=""><FaCartPlus /></a>
-                </ul>
-              </div>
-            </div>
-          );
-          })}
-        </div>
-        <div className="CardDeitado" ref={CardDeitadoTwo}>
         {data.map((item) => {
           const { id, name, price, categoria, image } = item;
           return (
             <div className="CardDeitado-flex" key={id}>
-              <div className="image">
+              <div className="CardDeitado-image">
                 <img src={image} alt={name} />
               </div>
               <div className="CardDeitado-Info">
@@ -143,10 +116,35 @@ const CardDeitado = () =>{
             </div>
           );
           })}
+          </div>
+          <div className="CardDeitado" ref={CardDeitadoTwo}>
+          {data.map((item) => {
+          const { id, name, price, categoria, image } = item;
+          return (
+            <div className="CardDeitado-flex" key={id}>
+              <div className="CardDeitado-image">
+                <img src={image} alt={name} />
+              </div>
+              <div className="CardDeitado-Info">
+                <p>{categoria}</p>
+                <h3>{name}</h3>
+                <ul>
+                  <span><TiStar /></span>
+                  <span><TiStar /></span>
+                  <span><TiStar /></span>
+                  <span><TiStar /></span>
+                  <span><TiStar /></span>
+                </ul>
+                <ul className="CardDeitado-valor">
+                  <h4>R${price}</h4>
+                  <a href=""><FaCartPlus className="addCar"/></a>
+                </ul>
+              </div>
+            </div>
+          );
+          })}
+          </div>
         </div>
-        </div>
-        
-      </div>
     </>
   )
 }
