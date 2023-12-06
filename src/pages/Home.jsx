@@ -1,14 +1,14 @@
-import { useEffect, useState, useRef } from 'react';
+
+
+import React, { useEffect, useState, useRef } from 'react';
 import './Home.css';
 import { TiStar } from "react-icons/ti";
 import { FaCartPlus } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
-import CardDeitado from "./CardDeitado"
-import Banner from "./Banner"
-import card from '../imagens/sub-01.jpg'
-
-
+import CardDeitado from "./CardDeitado";
+import Banner from "./Banner";
+import card from '../imagens/sub-01.jpg';
 
 function Home() {
   const [data, setData] = useState([]);
@@ -20,7 +20,6 @@ function Home() {
       .then(setData);
   }, []);
 
-
   const [botaoEsquerdoAtivado, setBotaoEsquerdoAtivado] = useState(true);
   const [botaoDireitoAtivado, setBotaoDireitoAtivado] = useState(true);
 
@@ -28,19 +27,21 @@ function Home() {
     e.preventDefault();
 
     if (botaoEsquerdoAtivado) {
-      // Realiza a ação desejada aqui
       console.log("Botão esquerdo clicado!");
-
-      // Desativa o botão esquerdo temporariamente
       setBotaoEsquerdoAtivado(false);
 
-      // Reativa o botão após um período de tempo (por exemplo, 1 segundo)
       setTimeout(() => {
         setBotaoEsquerdoAtivado(true);
       }, 1000);
 
-      // Sua lógica para rolar para a esquerda
-      carousel.current.scrollLeft -= 1290 / 3;
+      // Lógica de rolagem adaptada para diferentes tamanhos de tela
+      if (window.innerWidth >= 1290) {
+        carousel.current.scrollLeft -= window.innerWidth / 3;
+      } else if (window.innerWidth >= 768) {
+        carousel.current.scrollLeft -= window.innerWidth / 2;
+      } else if (window.innerWidth <= 400){
+        carousel.current.scrollLeft -= window.innerWidth / 2;
+      }
     }
   };
 
@@ -48,34 +49,31 @@ function Home() {
     e.preventDefault();
 
     if (botaoDireitoAtivado) {
-      // Realiza a ação desejada aqui
       console.log("Botão direito clicado!");
-
-      // Desativa o botão direito temporariamente
       setBotaoDireitoAtivado(false);
 
-      // Reativa o botão após um período de tempo (por exemplo, 1 segundo)
       setTimeout(() => {
         setBotaoDireitoAtivado(true);
       }, 1000);
 
-      // Sua lógica para rolar para a direita
-      if (carousel.current.scrollLeft + carousel.current.clientWidth === carousel.current.scrollWidth) {
-        carousel.current.scrollLeft = 0;
-      } else {
-        carousel.current.scrollLeft += 1290 / 3;
+      // Lógica de rolagem adaptada para diferentes tamanhos de tela
+      if (window.innerWidth >= 1290) {
+        carousel.current.scrollLeft += window.innerWidth / 3;
+      } else if (window.innerWidth >= 768) {
+        carousel.current.scrollLeft += window.innerWidth / 2;
+      } else if (window.innerWidth <= 400) {
+        carousel.current.scrollLeft += window.innerWidth / 2;
       }
     }
   };
-
 
   if (!data || !data.length) return null;
 
   return (
     <div className="container">
       <Banner />
-       <div className='box'>
-        <div>
+      <div className='box'>
+      <div>
           <img src={card} alt="" />
         </div>
         <div>
@@ -92,9 +90,9 @@ function Home() {
         </div>
       </div>
       <div className="produtos">
-          <h1>NEW ARRIVALS</h1>
+        <h1>NEW ARRIVALS</h1>
         <div className='categoriasProdutos'>
-          <div className="category">
+        <div className="category">
               <a href="">HOME APPLIANCES</a>
               <a href="">COMPUTER</a>
               <a href="">ELETRONICS</a>
@@ -138,9 +136,10 @@ function Home() {
           );
         })}
       </div>
-        <CardDeitado/>
+      <CardDeitado />
     </div>
   );
 }
 
 export default Home;
+

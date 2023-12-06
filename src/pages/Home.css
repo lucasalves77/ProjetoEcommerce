@@ -16,7 +16,6 @@
   justify-content: space-between;
   scroll-behavior: smooth;
   width: 100%;
-
 }
 
 .carousel::-webkit-scrollbar {
@@ -48,7 +47,11 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-.flexCardBox .image img {
+.image{
+  width: 100%;
+}
+
+.image img {
   width: 100%;
   padding: 20px;
   object-fit: cover;
@@ -170,7 +173,7 @@
   width: 100%;
 }
 
-@media (max-width: 800px){
+@media (max-width: 768px){
 
   .flexCardBox {
     width: calc(100% / 4 - 10px);
@@ -178,7 +181,7 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 400px){
 
   .flexCardBox {
     width: calc(100% / 2 - 10px);
@@ -192,8 +195,24 @@
     gap: 20px;
   }
 
-  .flexCardBox {
-    width: 50%;
+  .box{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
   }
+
+  .category a{
+    display: none;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  
+
+
+  .carousel {
+    height: 50vh;
+  }
+
 }
 

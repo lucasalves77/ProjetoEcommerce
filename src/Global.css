@@ -18,6 +18,10 @@ body{
   margin: 0 auto;
 }
 
+.containerMobile{
+  max-width: 500px;
+}
+
 @-moz-document url-prefix() {
   
   .container {

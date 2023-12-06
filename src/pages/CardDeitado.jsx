@@ -40,8 +40,16 @@ const CardDeitado = () =>{
       }, 1000);
 
       // Sua lógica para rolar para a esquerda
-      CardDeitadoOne.current.scrollLeft -= 1290 / 3;
-      CardDeitadoTwo.current.scrollLeft -= 1290 / 3;
+      if (window.innerWidth >= 1290) {
+        CardDeitadoOne.current.scrollLeft -= 1290;
+        CardDeitadoTwo.current.scrollLeft -= 1290;
+      } else if (window.innerWidth >= 768) {
+        CardDeitadoOne.current.scrollLeft -= window.innerWidth / 1;
+        CardDeitadoTwo.current.scrollLeft -= window.innerWidth / 1;
+      } else if (window.innerWidth <= 400) {
+        CardDeitadoOne.current.scrollLeft -= window.innerWidth / 1;
+        CardDeitadoTwo.current.scrollLeft -= window.innerWidth / 1;
+      }
     }
   };
 
@@ -61,14 +69,15 @@ const CardDeitado = () =>{
       }, 1000);
 
       // Sua lógica para rolar para a direita
-      if (CardDeitadoOne.current.scrollLeft && CardDeitadoTwo.current.scrollLeft 
-        + CardDeitadoOne.current.clientWidth && CardDeitadoTwo.current.clientWidth 
-        === CardDeitadoOne.current.scrollWidth && CardDeitadoTwo.current.scrollWidth) {
-        CardDeitadoOne.current.scrollLeft = 0;
-        CardDeitadoTwo.current.scrollLeft = 0;
-      } else {
-        CardDeitadoOne.current.scrollLeft += 1290 / 3;
-        CardDeitadoTwo.current.scrollLeft += 1290 / 3;
+      if (window.innerWidth >= 1290) {
+        CardDeitadoOne.current.scrollLeft += 1290 ;
+        CardDeitadoTwo.current.scrollLeft += 1290 ;
+      } else if (window.innerWidth >= 768) {
+        CardDeitadoOne.current.scrollLeft += window.innerWidth ;
+        CardDeitadoTwo.current.scrollLeft += window.innerWidth ;
+      } else if (window.innerWidth <= 400) {
+        CardDeitadoOne.current.scrollLeft += window.innerWidth ;
+        CardDeitadoTwo.current.scrollLeft += window.innerWidth ;
       }
     }
   };
