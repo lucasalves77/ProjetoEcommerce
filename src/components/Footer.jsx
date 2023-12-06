@@ -18,11 +18,36 @@ const Footer = () =>{
 
   return(
     <>
-    <div className="footerOne">
-      <div className="container">
-        
-        <div className="footerOneFlex">
-            <div className="contato">
+    
+    <div className="newsletterBack">
+      <div className="containertwo">
+        <div className="container">
+          <div className="newsletter">
+            <div className="newsletterFlex">
+              <h2>Newsletter</h2>
+              <div className="lineNew"></div>
+              <p>Assine nossa Newsletter e receba as últimas novidades, dicas de moda e promoções exclusivas.</p>
+              <ul>
+                <input type="text" />
+                <a href=""><ArrowForwardRoundedIcon className="seta"/></a>
+              </ul>
+            </div>
+            <ul>            
+              <a href=""><AiFillInstagram className="socialsCash" /></a>
+              <a href=""><IoLogoTwitter className="socialsCash"  /></a>
+              <a href=""><FaLinkedinIn className="socialsCash"  /></a>
+              <a href=""><FaFacebookF className="socialsCash"  /></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+      <div className="footerOne">
+        <div className="containertwo">
+          <div className="container">
+             <div className="footerOneFlex">
+               <div className="contato">
               <h5>Contato</h5>
               <div className="line"></div>
               <div className="contact">
@@ -74,39 +99,27 @@ const Footer = () =>{
                 <li>Cookies</li>
               </ul>
             </div>
-        </div> 
-        <div className="linhaFooter"></div>
-        <div className="newsletter">
-          <div className="newsletterFlex">
-            <h2>Newsletter</h2>
-            <div className="line"></div>
-            <p>Assine nossa Newsletter e receba as últimas novidades, dicas de moda e promoções exclusivas.</p>
-            <ul>
-              <input type="text" />
-              <a href=""><ArrowForwardRoundedIcon className="seta"/></a>
-            </ul>
           </div>
-          <ul>
-            <FaCcMastercard className="socialsCash"  />
-            <FaCcPaypal className="socialsCash"  />
-            <FaPix className="socialsCash"  />
-            <FaBarcode className="socialsCash"  />
-          </ul>
         </div>
-      </div> 
-      </div> 
+        </div>
+        
+       
+      </div>  
       <div className="footerTwo">
-        <div className="container">
-        <div className="footerTwoFlex">
-            <p>Powered by BigCommerce© 2023 PayeeShop</p>
-          <ul>
-            <a href=""><AiFillInstagram className="socialsCash" /></a>
-            <a href=""><IoLogoTwitter className="socialsCash"  /></a>
-            <a href=""><FaLinkedinIn className="socialsCash"  /></a>
-            <a href=""><FaFacebookF className="socialsCash"  /></a>
-          </ul>
+        <div className="containertwo">
+          <div className="container">
+            <div className="footerTwoFlex">
+                <p>Powered by BigCommerce© 2023 PayeeShop</p>
+                <ul>
+                <FaCcMastercard className="socialsCash"  />
+                <FaCcPaypal className="socialsCash"  />
+                <FaPix className="socialsCash"  />
+                <FaBarcode className="socialsCash"  />
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+        
       </div> 
     </>
   )

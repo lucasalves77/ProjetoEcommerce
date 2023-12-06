@@ -41,8 +41,8 @@ const CardDeitado = () =>{
 
       // Sua lógica para rolar para a esquerda
       if (window.innerWidth >= 1290) {
-        CardDeitadoOne.current.scrollLeft -= 1290;
-        CardDeitadoTwo.current.scrollLeft -= 1290;
+        CardDeitadoOne.current.scrollLeft -= 1290 / 1;
+        CardDeitadoTwo.current.scrollLeft -= 1290 / 1;
       } else if (window.innerWidth >= 768) {
         CardDeitadoOne.current.scrollLeft -= window.innerWidth / 1;
         CardDeitadoTwo.current.scrollLeft -= window.innerWidth / 1;
@@ -67,11 +67,12 @@ const CardDeitado = () =>{
       setTimeout(() => {
         setBotaoDireitoAtivado(true);
       }, 1000);
+      
 
       // Sua lógica para rolar para a direita
       if (window.innerWidth >= 1290) {
-        CardDeitadoOne.current.scrollLeft += 1290 ;
-        CardDeitadoTwo.current.scrollLeft += 1290 ;
+        CardDeitadoOne.current.scrollLeft += 1290 / 1 ;
+        CardDeitadoTwo.current.scrollLeft += 1290 / 1 ;
       } else if (window.innerWidth >= 768) {
         CardDeitadoOne.current.scrollLeft += window.innerWidth ;
         CardDeitadoTwo.current.scrollLeft += window.innerWidth ;

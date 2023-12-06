@@ -8,11 +8,11 @@
   position: relative;
 }
 
-details summary::-webkit-details-marker {
+#meusDetalhes summary::-webkit-#meusDetalhes-marker {
   display: none;
 }
 
-summary{
+.summaryDesk{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,12 @@ summary{
   -webkit-user-select: none;
 }
 
-details ul{
+.menu{
+  font-size: 1.5rem;
+  color: white;
+}
+
+#meusDetalhes ul, #meusDetalhesMobile ul{
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -42,22 +47,57 @@ details ul{
   z-index: 9999;
 }
 
-details ul li{
+#meusDetalhes ul li{
   border-bottom: 1px solid gray;
   width: 100%;
   transition: 0.3s;
 }
 
-details ul li:hover{
+#meusDetalhes ul li:hover{
   background-color: antiquewhite;
 }
 
-details a{
+#meusDetalhes a{
   text-decoration: none;
   color: gray;
 }
 
-.menu{
-  font-size: 1.5rem;
-  color: white;
+#meusDetalhesMobile{
+  display: none;
+}
+
+@media (max-width: 400px){
+
+  #meusDetalhes{
+    display: none;
+  }
+
+  .menuMobile{
+    display: flex;
+    color: white;
+    font-size: 1.4rem;
+  }
+
+  #meusDetalhesMobile{
+    display: block;
+  }
+  
+  .summaryMobile::-webkit-details-marker{
+    display: none;
+  }
+
+  .summaryMobile{
+    user-select: none;
+    -webkit-user-select: none;
+    list-style: none;
+  }
+
+  .categoria{
+    background-color: transparent;
+    width: 80px;
+  }
+
+  #meusDetalhesMobile ul{
+    height: 80vh;
+  }
 }

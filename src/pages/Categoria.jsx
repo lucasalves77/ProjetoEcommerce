@@ -19,7 +19,24 @@ const Categoria = () =>{
     <>
       <div className="categoria">
         <details id="meusDetalhes">
-          <summary><FaListUl className="menu" />Categoria</summary>
+          <summary className="summaryDesk"><FaListUl className="menu" />Categoria</summary>
+          <FaListUl className="menuMobile"/>
+          <ul>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+            <li><a href="">Computador</a></li>
+          </ul>
+        </details>
+        <details id="meusDetalhesMobile">
+          <summary className="summaryMobile"><FaListUl className="menuMobile"/></summary>
           <ul>
             <li><a href="">Computador</a></li>
             <li><a href="">Computador</a></li>

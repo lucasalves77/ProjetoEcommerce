@@ -18,6 +18,12 @@ body{
   margin: 0 auto;
 }
 
+.containertwo{
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 1%;
+}
+
 .containerMobile{
   max-width: 500px;
 }

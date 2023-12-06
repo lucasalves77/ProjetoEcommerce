@@ -1,6 +1,5 @@
 .bannerOne{
   position: relative;
-  background-color: red;
 }
 
 .banner {
@@ -19,7 +18,6 @@
 .bannerImg{
   flex: none; 
   width: calc(100% / 1);
-  height: 50vh;
   position: relative;
 }
 
@@ -27,7 +25,6 @@
   display: block;
   width: 100%;
   height: auto;
-
 }
 
 .buttonsBanner{
@@ -51,4 +48,23 @@
   display: block;
   color: white;
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+
+  .bannerImg{
+    flex: none; 
+    width: calc(100% / 1);
+    height: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 400px){
+
+
+.buttonsBanner{
+  display: none;
+}
+
 }

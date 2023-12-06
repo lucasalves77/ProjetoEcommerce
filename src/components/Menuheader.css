@@ -134,11 +134,29 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 400px){
 
   .meuHeaderOne{
     
     height: 8vh;
     gap: 50px;
   }
+
+  .socials{
+    display: none;
+  }
+
+  .meuHeaderOne ul{
+    display: none;
+  }
+
+  .meuHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6vh;
+    gap: 10px;
+    width: 100%;
+  }
+  
 }

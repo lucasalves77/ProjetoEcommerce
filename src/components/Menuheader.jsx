@@ -15,7 +15,8 @@ const MenuHeader = () =>{
   return(
     <>
     <div className="headerOne">
-      <div className="container">  
+      <div className="containertwo">
+        <div className="container">  
       <div className="meuHeaderOne">
           <h2>Ecommerce</h2>
           <ul>
@@ -30,21 +31,24 @@ const MenuHeader = () =>{
             <a href=""><FaUser className="carUser" /></a>
           </div>
         </div>
-    </div>
+     </div>
+      </div>
     </div>
     <div className="header">
-      <div className="container">
-        <div className="meuHeader">
-            <Categoria/>
-          <div className="input">
-            <input type="text" />
-            <a href=""><IoIosSearch className="search"/></a>
-          </div>
-          <div className="socials">
-            <a href=""><AiFillInstagram /></a>
-            <a href=""><IoLogoTwitter /></a>
-            <a href=""><FaLinkedinIn /></a>
-            <a href=""><FaFacebookF /></a>
+      <div className="containertwo">
+        <div className="container">
+          <div className="meuHeader">
+              <Categoria/>
+            <div className="input">
+              <input type="text" />
+              <a href=""><IoIosSearch className="search"/></a>
+            </div>
+            <div className="socials">
+              <a href=""><AiFillInstagram /></a>
+              <a href=""><IoLogoTwitter /></a>
+              <a href=""><FaLinkedinIn /></a>
+              <a href=""><FaFacebookF /></a>
+            </div>
           </div>
         </div>
       </div>
