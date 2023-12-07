@@ -1,6 +1,6 @@
 #menuCategoria{
   background-color: #ea1044;
-  width: 220px;
+  width: 300px;
   height: 100%; 
   display: flex;
   flex-direction: column;
@@ -12,13 +12,16 @@
 .iconCategoria{
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translate(-0%, -50%);
+  padding: 0 10px;
 }
 
 .buttonIcon{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   gap: 5px;
   cursor: pointer;
   background-color: transparent;
@@ -47,30 +50,28 @@
   flex-direction: column;
   align-items: start;
   position: absolute;
-  width: 200px;
+  width: 100%;
   left: 0;
   top: 100%;
-  height: 50vh;
+  height: 40vh;
   z-index: 888;
-  overflow: hidden;
+  overflow: hidden; 
+  border: 1px solid #e2e2e2;
   transition: all 0.5s ease-in-out;
 }
 
-.menuDesktop ul{
+.menuDesktop .menuMob ul{
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   text-decoration: none;
-  height: 50vh;
-  width: 200px;
-  border: 1px solid #e2e2e2;
+  height: 40vh;
   border-top: 0;
 }
 
 .menuDesktop ul li{
   width: 100%;
   border-top: 1px solid #e2e2e2;
-  background-color: white;
 }
 
 .menuDesktop ul li:first-child {
@@ -80,14 +81,36 @@
 .menuDesktop ul li a{
   display: flex;
   align-items: center;
-  width: 100%;
   text-decoration: none;
   color: gray;
   height: 100%;
+  width: 200px;
 }
 
 .fechar{
   display: none;
+  width: 100%;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.menuDesk{
+  display: none;
+}
+
+.menuDesk summary::-webkit-details-marker, .menuMob summary::-webkit-details-marker {
+  display: none;
+}
+
+.menuDesk summary, .menuMob summary {
+  list-style-type: none;
+}
+
+.menuMob summary{
+  display: none;
+}
+
+summary{
+  text-align: start;
 }
 
 
@@ -96,8 +119,6 @@
   .menuDesktop{
     display: none;
   }
-
-  
 }
 
 @media only screen and (max-width: 400px){
@@ -111,20 +132,35 @@
     width: 80px;
   }
 
-
-  .menuMobile{
+  .menuMobile {
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: start;
     position: fixed;
-    width: 220px;
+    width: 70%;
     left: 0;
     top: 0;
+    height: 100vh;
     z-index: 888;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
     list-style: none;
+    padding: 10px ;
+  }
+
+  .menuMobile .menuMob ul{
+    background-color: blue;
+    height: 0;
+  }
+
+  .menuMobile .menuMob ul li{
+    padding: 10px 0;
+  }
+
+  .menuMobile .menuMob ul li a{
+    font-size: 14px;
+    width: 100%;
   }
 
   .buttonIcon h3{
@@ -137,4 +173,65 @@
     left: 0;
     margin-left: 10px;
   }
+
+  .fechar{
+    display: block;
+    text-align: end;
+  }
+
+  .menuDesk{
+    display: block;
+  }
+
+  .menuMob summary{
+    display: block;
+  }
+
+  
+  .menuDesk summary,
+  .menuMob summary{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .original,
+  .original2{
+    color: red;
+  }
+
+  .titleMenu,
+  .titleCategoria{
+    color: black;
+  }
+
+  h2{
+    font-size: 16px;
+  }
+
+  .towMenu{
+    overflow-y: scroll;
+    height: 30vh; 
+    width: 100%;
+    height: 100%;
+  }
+
+  .menuDeskUl ul{
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr;
+  }
+
+  .menuDeskUl ul li{
+    padding: 10px 0;
+  }
+
+  .menuDeskUl ul li a{
+    height: 100%;
+    font-size: 14px;
+  }
+
 }
