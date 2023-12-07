@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Categoria.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { IoMdMenu } from "react-icons/io";
 
 
 const Categoria = () => {
@@ -53,10 +54,10 @@ const Categoria = () => {
       <div id="menuCategoria">
         <div className="iconCategoria">
           <button className='buttonIcon' onClick={handleButtonClick}>
-            {Mobile ? <CloseIcon className="iconMenu"/> : <MenuIcon className="iconMenu"/>} <h3>CATEGORIA</h3>
+            {Mobile ? <CloseIcon className="iconMenu"/> : <IoMdMenu className="iconMenu"/>} <h3>CATEGORIA</h3>
           </button>
         </div>
-        <nav id="meusDetalhesMobile">
+        <div id="meusDetalhesMobile">
           <div className={Mobile ? "menuMobile menuDesktop" : "false"} onClick={() => setMobile(false)}>
             <div className='towMenu' onClick={handleContentClick}>
               <div className="fechar">
@@ -96,7 +97,7 @@ const Categoria = () => {
                 </details>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
     </>
   );

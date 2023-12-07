@@ -34,6 +34,7 @@
 
 .iconMenu{
   color: white;
+  font-size: 30px;
 }
 
 .false{
@@ -132,6 +133,12 @@ summary{
     width: 80px;
   }
 
+  .iconMenu{
+    font-size: 40px;
+    height: 100%;
+
+  }
+
   .menuMobile {
     background-color: white;
     display: flex;
@@ -150,7 +157,6 @@ summary{
   }
 
   .menuMobile .menuMob ul{
-    background-color: blue;
     height: 0;
   }
 
@@ -163,15 +169,20 @@ summary{
     width: 100%;
   }
 
+
+
   .buttonIcon h3{
    display: none;
   }
 
   .iconCategoria{
     position: absolute;
+    display: flex;
     top: 50%;
     left: 0;
-    margin-left: 10px;
+    height: 100%;
+
+    padding: 0;
   }
 
   .fechar{
@@ -186,7 +197,6 @@ summary{
   .menuMob summary{
     display: block;
   }
-
   
   .menuDesk summary,
   .menuMob summary{
