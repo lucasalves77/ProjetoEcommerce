@@ -6,7 +6,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #d8d5d5;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #2980b9;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
 }
+
+
+
 
 body{
   background-color: #F1F3F8;

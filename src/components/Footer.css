@@ -74,7 +74,7 @@
 }
 
 .lineNew{
-  width: 2px;
+  width: 5px;
   height: 40px;
   background-color: #105caa;
 }
@@ -170,4 +170,45 @@
     gap: 50px;
     padding-top: 50px;
   }
+}
+
+@media (max-width: 400px){
+
+  .footerOneFlex {
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 40px;
+  }
+
+  .newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+  }
+
+  .newsletterFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .lineNew{
+    width: 40px;
+    height: 2px;
+  }
+
+  .footerTwoFlex{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .contato{
+    width: 300px;
+  }
+  
 }

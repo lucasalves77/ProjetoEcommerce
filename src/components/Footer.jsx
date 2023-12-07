@@ -18,7 +18,6 @@ const Footer = () =>{
 
   return(
     <>
-    
     <div className="newsletterBack">
       <div className="containertwo">
         <div className="container">
@@ -28,7 +27,7 @@ const Footer = () =>{
               <div className="lineNew"></div>
               <p>Assine nossa Newsletter e receba as últimas novidades, dicas de moda e promoções exclusivas.</p>
               <ul>
-                <input type="text" />
+                <input type="text" placeholder="Seu email" />
                 <a href=""><ArrowForwardRoundedIcon className="seta"/></a>
               </ul>
             </div>
@@ -41,7 +40,6 @@ const Footer = () =>{
           </div>
         </div>
       </div>
-      
     </div>
       <div className="footerOne">
         <div className="containertwo">
@@ -102,8 +100,6 @@ const Footer = () =>{
           </div>
         </div>
         </div>
-        
-       
       </div>  
       <div className="footerTwo">
         <div className="containertwo">
@@ -119,7 +115,6 @@ const Footer = () =>{
             </div>
           </div>
         </div>
-        
       </div> 
     </>
   )

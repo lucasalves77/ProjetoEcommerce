@@ -88,19 +88,16 @@ function Home() {
               <div>
                 <img src={card} alt="" />
               </div>
-              <div>
-                <img src={card} alt="" />
-              </div>
             </div>
             <div className="produtos">
               <h1>NEW ARRIVALS</h1>
               <div className='categoriasProdutos'>
-              <div className="category">
-                    <a href="">HOME APPLIANCES</a>
-                    <a href="">COMPUTER</a>
-                    <a href="">ELETRONICS</a>
-                    <a href="">SMARTPHONE & TABLET</a>
-                    <a href="">CAMERA</a>
+                <div className="category">
+                  <a href="">HOME APPLIANCES</a>
+                  <a href="">COMPUTER</a>
+                  <a href="">ELETRONICS</a>
+                  <a href="">SMARTPHONE & TABLET</a>
+                  <a href="">CAMERA</a>
                 </div>   
                 <div className="buttons">
                   <button onClick={handleLeftClick} disabled={!botaoEsquerdoAtivado}>
