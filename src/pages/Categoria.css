@@ -51,75 +51,73 @@
   flex-direction: column;
   align-items: start;
   position: absolute;
-  width: 100%;
+  width: 250px;
   left: 0;
   top: 100%;
-  height: 40vh;
-  z-index: 888;
+  z-index: 999;
   overflow: hidden; 
-  border: 1px solid #e2e2e2;
   transition: all 0.5s ease-in-out;
 }
 
-.menuDesktop .menuMob ul{
+.menuMob ul{
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: center;
+  grid-template-rows: repeat(15, 1fr);
+  justify-content: space-between;
   text-decoration: none;
-  height: 40vh;
-  border-top: 0;
+  list-style: none;
+  border: 1px solid #e2e2e2;
 }
 
-.menuDesktop ul li{
+.menuMob ul li{
   width: 100%;
-  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
 }
 
-.menuDesktop ul li:first-child {
-  border-top: 0;
+.menuMob ul li:last-child {
+  border-bottom: 0;
 }
 
-.menuDesktop ul li a{
+.menuMob ul li a{
   display: flex;
   align-items: center;
   text-decoration: none;
   color: gray;
   height: 100%;
-  width: 200px;
+  width: 250px;
+  font-size: 14px;
+  padding: 10px;
 }
 
-.fechar{
-  display: none;
-  width: 100%;
-  border-bottom: 1px solid #e2e2e2;
-}
-
-.menuDesk{
-  display: none;
-}
-
-.menuDesk summary::-webkit-details-marker, .menuMob summary::-webkit-details-marker {
+.fechar,
+.menuDesk,
+.socialsMenu,
+.menuMob2{
   display: none;
 }
+ 
 
-.menuDesk summary, .menuMob summary {
+
+.menuDesk summary::-webkit-details-marker,
+.menuMob summary::-webkit-details-marker {
+  display: none;
+}
+
+.menuDesk summary,
+.menuMob summary {
   list-style-type: none;
-}
-
-.menuMob summary{
   display: none;
 }
+
 
 summary{
   text-align: start;
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px){
   
-  .menuDesktop{
-    display: none;
-  }
+  
 }
 
 @media only screen and (max-width: 400px){
@@ -133,10 +131,13 @@ summary{
     width: 80px;
   }
 
+  .menuMob{
+    display: none;
+  }
+
   .iconMenu{
     font-size: 40px;
     height: 100%;
-
   }
 
   .menuMobile {
@@ -152,24 +153,42 @@ summary{
     z-index: 888;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
+  }
+
+  .menuMob2{
+    display: block;
+  }
+
+  .menuMob2 ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-decoration: none;
+    height: 60vh;
+    border-top: 0;
     list-style: none;
-    padding: 10px ;
   }
-
-  .menuMobile .menuMob ul{
-    height: 0;
-  }
-
-  .menuMobile .menuMob ul li{
+  
+  .menuMob2 ul li{
+    width: 100%;
+    border-top: 1px solid #e2e2e2;
     padding: 10px 0;
   }
-
-  .menuMobile .menuMob ul li a{
-    font-size: 14px;
-    width: 100%;
+  
+  .menuMob2 ul li:first-child {
+    border-top: 0;
   }
-
-
+  
+  .menuMob2 ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: gray;
+    height: 100%;
+    width: 250px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
 
   .buttonIcon h3{
    display: none;
@@ -181,35 +200,35 @@ summary{
     top: 50%;
     left: 0;
     height: 100%;
-
     padding: 0;
   }
 
   .fechar{
     display: block;
     text-align: end;
+    padding: 10px 10px 0 0;
+  }
+
+  .closeInterno{
+    font-size: 30px;
   }
 
   .menuDesk{
     display: block;
   }
 
-  .menuMob summary{
-    display: block;
-  }
-  
   .menuDesk summary,
-  .menuMob summary{
+  .menuMob2 summary{
     display: flex;
     align-items: center;
     gap: 5px;
     border-bottom: 1px solid #e2e2e2;
     margin-top: 10px;
-    padding-bottom: 5px;
+    padding: 10px;
+    list-style-type: none;
   }
 
-  .original,
-  .original2{
+  .original{
     color: red;
   }
 
@@ -237,11 +256,35 @@ summary{
 
   .menuDeskUl ul li{
     padding: 10px 0;
+    border-bottom: 1px solid #e2e2e2;
   }
 
-  .menuDeskUl ul li a{
+  .linkMenuMobile{
     height: 100%;
     font-size: 14px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: gray;
+  }
+
+  .socialsMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .iconSocials {
+    display: block;
+    color: red;
+    font-size: 25px;
   }
 
 }
