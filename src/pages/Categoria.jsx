@@ -11,6 +11,12 @@ import { FaFacebookF } from "react-icons/fa";
 
 
 const Categoria = () => {
+  
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const fecharMenu = () => {
+    setMenuAberto(false);
+  };
 
   function trocarCor() {
 

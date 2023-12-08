@@ -37,14 +37,6 @@
   font-size: 30px;
 }
 
-.false{
-  display: none;
-}
-
-.menuMobile{
-  display: none;
-}
-
 .menuDesktop{
   background-color: white;
   display: flex;
@@ -89,14 +81,14 @@
   padding: 10px;
 }
 
+.false,
+.menuMobile,
 .fechar,
 .menuDesk,
 .socialsMenu,
 .menuMob2{
   display: none;
 }
- 
-
 
 .menuDesk summary::-webkit-details-marker,
 .menuMob summary::-webkit-details-marker {
@@ -107,11 +99,6 @@
 .menuMob summary {
   list-style-type: none;
   display: none;
-}
-
-
-summary{
-  text-align: start;
 }
 
 
@@ -132,6 +119,10 @@ summary{
   }
 
   .menuMob{
+    display: none;
+  }
+
+  h3{
     display: none;
   }
 
