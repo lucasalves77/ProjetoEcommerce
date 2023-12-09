@@ -1,9 +1,9 @@
 .headerOne{
-  background-color: #105caa;
+  background-color: white;
 }
 
 .header{
-  background-color: #023f7c;
+  background-color: #105caa;
 }
 
 .meuHeaderOne{
@@ -11,10 +11,10 @@
   align-items: center;
   position: relative;
   height: 10vh;
-  gap: 50px;
+  gap: 200px;
 }
 
-.meuHeaderOne ul{
+.meuHeader ul{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,29 +23,21 @@
   width: 100%;
 }
 
-.meuHeaderOne{
-  color: white;
-}
-
 .meuHeaderOne h2{
-  color: white;
-  width: 220px;
+  color: #222222;
 }
 
 .carUserLogin{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
-  background-color: #0f5091;
-  width: 220px;
   height: 100%;
 }
 
 .carUser {
-  margin: 0 10px;
-  font-size: 20px;
-  color: white;
+  font-size: 25px;
+  color: #222222;
 }
 
 .meuHeader{
@@ -74,16 +66,18 @@
 .input input{
   width: 100%;
   border: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 10px 20px;
-  background-color: #105caa;
-  color: white;
+  background-color: white;
+  color: black;
+  border: 1px solid #e2e2e2;
+  font-size: 14px;
 }
 
 .input input:focus{
   outline: none;
   box-shadow: none;
-  color: white;
+  color: black;
 }
 
 .input a{
@@ -91,11 +85,11 @@
   display: flex;
   align-items: center;
   right: 0;
-  background-color: #ea1044;
+  background-color: #105caa;
   height: 100%;
   padding: 0 15px;
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 .search{
@@ -108,9 +102,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 220px;
   gap: 20px;
-  background-color: #03376b;
+  padding: 0 10px;
+  background-color: #024281;
   height: 100%;
 }
 
@@ -119,6 +113,16 @@
   color: white;
   font-size: 1.2rem;
 }
+
+.blockDesk{
+  display: none;
+}
+
+.blockMobile{
+  display: flex;
+}
+
+
 
 @media (max-width: 800px){
 
@@ -136,17 +140,34 @@
 
 @media (max-width: 400px){
 
-  .meuHeaderOne{
-    
+  .headerOne{
+    background-color: #105caa;
+  }
+  
+  .header{
+    background-color: white;
+  }
+
+  .meuHeaderOne h2{
+    color: white;
+  }
+
+  .carUser {
+    font-size: 20px;
+    color: white;
+  }
+
+  .meuHeaderOne{ 
     height: 8vh;
-    gap: 50px;
+    gap: 10px;
+    justify-content: space-between;
   }
 
   .socials{
     display: none;
   }
 
-  .meuHeaderOne ul{
+  .meuHeader ul{
     display: none;
   }
 
@@ -157,6 +178,10 @@
     height: 6vh;
     gap: 10px;
     width: 100%;
+  }
+
+  .blockMobile{
+    display: none;
   }
   
 }

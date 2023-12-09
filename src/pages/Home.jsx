@@ -10,6 +10,7 @@ import CardDeitado from "./CardDeitado";
 import TopCategoria from "./TopCategoria"
 import Banner from "./Banner";
 import card from '../imagens/sub-01.jpg';
+import card2 from '../imagens/Cms-banner-2.jpg';
 
 function Home() {
   const [data, setData] = useState([]);
@@ -77,10 +78,7 @@ function Home() {
             <Banner />
             <div className='box'>
             <div>
-                <img src={card} alt="" />
-              </div>
-              <div>
-                <img src={card} alt="" />
+                <img src={card2} alt="" />
               </div>
               <div>
                 <img src={card} alt="" />

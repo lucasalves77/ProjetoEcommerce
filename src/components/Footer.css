@@ -1,9 +1,9 @@
 .footerOne{
-  background-color: #023f7c;
+  background-color: #222222;
 }
 
 .footerTwo{
-  background-color: #105caa;
+  background-color: #222222;
 }
 
 .footerOneFlex {
@@ -80,7 +80,7 @@
 }
 
 .newsletterBack{
-  background-color: #032d57;
+  background-color: #141414;
   padding: 15px 0;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .newsletter h2{
-  color: white;
+  color: #105caa;
 }
 
 .newsletter p{
@@ -118,11 +118,12 @@
 .newsletter input{
   width: 100%;
   padding: 13px;
-  border-radius: 3px;
-  border: 0;
+  border-radius: 2px;
+  border: 1px solid #e2e2e2;
   color: white;
-  background-color: #105caa;
+  background-color: white;
   position: relative;
+  margin-left: 20px;
 }
 
 .newsletter input:focus{
@@ -136,11 +137,11 @@
   display: flex;
   align-items: center;
   right: 0;
-  background-color: #ea1044;
+  background-color: #105caa;
   height: 100%;
   padding: 0 20px;
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 .seta{
@@ -149,8 +150,6 @@
 
 .newsletter ul{
   display: flex;
-  justify-content: end;
-  align-items: end;
   gap: 20px;
 }
 
@@ -209,6 +208,10 @@
 
   .contato{
     width: 300px;
+  }
+
+  .newsletter input{
+    margin-left: 0;
   }
   
 }

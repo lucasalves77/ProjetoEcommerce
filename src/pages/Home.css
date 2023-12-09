@@ -1,13 +1,16 @@
 .box{
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   justify-content: space-between;
   margin: 50px 0;
   gap: 20px;
+  height: 25vh;
 }
 
 .box img{
   display: block;
   width: 100%;
+  height: 25vh;
 }
 
 .carousel {
